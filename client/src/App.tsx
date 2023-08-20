@@ -1,17 +1,17 @@
 import React from 'react';
 import './App.css';
-import { EuiAccordion, EuiButton, EuiFlexGroup, EuiFlexItem, EuiImage, EuiLink, EuiSpacer, EuiText} from '@elastic/eui';
+import { EuiAccordion, EuiButton, EuiFlexGroup, EuiFlexItem, EuiImage, EuiLink, EuiListGroup, EuiListGroupItem, EuiSpacer, EuiText} from '@elastic/eui';
 
 const file_saver = require('file-saver');
-const image = require("./media/me.png");
+const image = require("./media/me.jpg");
 
 function App() {
   return (
     <div>
       <EuiFlexGroup>
         <EuiFlexItem className='right_align'>
-          <EuiText css={{"fontSize": "48px", "fontWeight": "bold", "fontFamily": "sans-serif"}}>Edan Landow</EuiText>
-          <EuiText css={{"fontSize": "26px", "fontWeight": "bold", "fontFamily": "sans-serif"}}>Software Engineer</EuiText>
+          <EuiText css={{"fontSize": "48px", "font-family": "'Courier New', monospace", "color": "#20C20E"}}>Edan Landow</EuiText>
+          <EuiText css={{"fontSize": "26px", "fontWeight": "bold", "fontFamily": "'Courier New', monospace", "color": "#10B10D"}}>Software Engineer</EuiText>
         </EuiFlexItem>
         <EuiFlexItem >
         <div>
@@ -24,12 +24,18 @@ function App() {
         </div>
         </EuiFlexItem>
       </EuiFlexGroup>
-        <p>Hi, I'm Edan. I'm a Software Engineer based in Canberra, Australia.</p>
-        <p>I'm experienced at learning new languages and technologies on the fly and am always ready to learn more to ensure I can use the best tool for the job.</p>
-        <p>I'm ambitious and love to be challenged.</p> 
-        <p>I work well in a team and am happy to co-ordinate with others to find and work on problems in the best way for every participant, and am always keen to both teach and learn from others.</p>
-        <p>I'm open to all kinds of work, however as someone interested in science and problems that require algorithms to solve, I'd be exceptionally excited to work with scientific industries.</p>
-        <p>If I seem like someone you'd be keen to have working for you, feel free to reach out using the details under "Contact Me".</p>
+      <EuiSpacer />
+      <EuiSpacer />
+        <EuiText color='#32a877' css={{"fontSize": "32px", "fontWeight": "lighter"}}>
+          <p>Hi. I'm Edan, a Software Engineer based in Canberra, Australia.<br />
+          I'm experienced at learning new languages and technologies on the fly and am always ready to learn more to ensure I can use the best tool for the job.<br />
+          As an ambitous developer who loves to be challenged, I'm always keen to take on new problems outside my familiarity.<br /> <br />
+          I work well in a team and am happy to co-ordinate with others to find and work on problems in the best way for every participant, and am always keen to both teach and learn from others.<br /> <br />
+          I'm open to all kinds of work, however as someone interested in science and problems that require algorithms to solve I'd be exceptionally excited to work with scientific industries.<br /> <br />
+          If I seem like someone you'd be keen to have working for you, feel free to reach out using the details under "Contact Me".</p>
+        </EuiText>
+      <EuiSpacer />
+      <EuiSpacer />
       <EuiAccordion id={"0"} buttonContent={"Study"} paddingSize="m">
         <EuiText>
           <p>2021: Graduated the Australian National University with a bachelor of Information Technology majoring in Advanced Intelligent Systems</p>
@@ -65,7 +71,7 @@ function App() {
             console.log(blob);
             file_saver.saveAs(blob, "Edan Landow.pdf");
           }).catch((err) => {console.log(err)});
-          }}>Download Resume</EuiButton>
+          }}>Edan Landow.pdf (36.1KB)</EuiButton>
       </EuiAccordion>
     </div>
   ); 
