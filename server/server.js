@@ -6,7 +6,7 @@ const app = express();
 
 app.use(cors());
 app.get("/resume_download", (req, res) => {
-    const filepath = "/home/edan/Desktop/my_website/my-app/server/Edan Landow.pdf";
+    const filepath = "/home/edan/Desktop/my_website/server/Edan Landow.pdf";
     fs.stat(filepath, (_, stats) => {
         res.setHeader('Content-Disposition', `attachment; filename=aaa`);
         res.setHeader('Content-Type', 'application/pdf'); 
