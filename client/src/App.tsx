@@ -10,7 +10,7 @@ function App() {
     <div>
       <EuiFlexGroup>
         <EuiFlexItem className='right_align'>
-          <EuiText css={{"fontSize": "48px", "font-family": "'Courier New', monospace", "color": "#20C20E"}}>Edan Landow</EuiText>
+          <EuiText css={{"fontSize": "48px", "fontFamily": "'Courier New', monospace", "color": "#20C20E"}}>Edan Landow</EuiText>
           <EuiText css={{"fontSize": "26px", "fontWeight": "bold", "fontFamily": "'Courier New', monospace", "color": "#10B10D"}}>Software Engineer</EuiText>
         </EuiFlexItem>
         <EuiFlexItem >
@@ -78,28 +78,3 @@ function App() {
 }
 
 export default App;
-
-/*
-
-Success! Created my-app at /home/edan/Desktop/my_website/my-app
-Inside that directory, you can run several commands:
-
-  npm start
-    Starts the development server.
-
-  npm run build
-    Bundles the app into static files for production.
-
-  npm test
-    Starts the test runner.
-
-  npm run eject
-    Removes this tool and copies build dependencies, configuration files
-    and scripts into the app directory. If you do this, you can’t go back!
-
-We suggest that you begin by typing:
-
-  cd my-app
-  npm start
-
-  */

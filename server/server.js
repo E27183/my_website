@@ -8,7 +8,7 @@ app.use(cors());
 app.get("/resume_download", (req, res) => {
     const filepath = "/home/edan/Desktop/my_website/server/Edan Landow.pdf";
     fs.stat(filepath, (_, stats) => {
-        res.setHeader('Content-Disposition', `attachment; filename=aaa`);
+        res.setHeader('Content-Disposition', `attachment; filename=Edan Landow.pdf`);
         res.setHeader('Content-Type', 'application/pdf'); 
         res.setHeader('Content-Length', stats.size);
         const fileStream = fs.createReadStream(filepath);
